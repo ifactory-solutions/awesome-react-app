@@ -1,7 +1,18 @@
 #!/usr/bin/env node
 const awesomeCreateApp = require('./awesomeCreateApp')
+const chalk = require('chalk')
+const emoji = require('node-emoji')
 
-const args = process.argv.slice(2)
-const folderName = args[0]
+const missingAppNameError = `
+${emoji.get('boom')}  ${chalk.red('Error')} ${emoji.get('boom')}
+${chalk.red('App name must be provided')}`
 
-awesomeCreateApp(folderName)
+const argv = require('yargs')
+  .usage('$0 <appName>')
+  .demandCommand(1, missingAppNameError)
+  .help()
+  .version('0.0.1')
+  .argv
+
+awesomeCreateApp(argv._[0])
+
