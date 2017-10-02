@@ -38,10 +38,7 @@ const handleOptions = answers => {
   filteredActions.push(showEndProcessText)
 
   filteredActions
-    .reduce( (promise, func) => {
-      return promise
-        .then(() => func(cwd, folderName))
-    }, Promise.resolve())
+    .reduce( (promise, func) => promise .then(() => func(cwd, folderName)), Promise.resolve())
 }
 
 const showEndProcessText = () => {
