@@ -3,12 +3,12 @@ const child_process = require('child-process-promise')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 const emoji = require('node-emoji')
-const handlers = require('./handlers')
+const hooks = require('./hooks')
 
 const spawn = child_process.spawn
 const exec = child_process.exec
-const actions = handlers.actions
-const questions = handlers.questions
+const actions = hooks.actions
+const questions = hooks.questions
 
 const terminalOpts = {
   shell: true,
