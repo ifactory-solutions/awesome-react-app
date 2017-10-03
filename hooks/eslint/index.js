@@ -11,7 +11,7 @@ const savePackageJsonIn = packageJsonHelper.savePackageJsonIn
 const question = {
   name: 'eslint',
   type: 'confirm',
-  message: 'Do you would like to include eslint?'
+  message: 'Would you like to include eslint?'
 }
 
 const func = (cwd, folderName) => {
