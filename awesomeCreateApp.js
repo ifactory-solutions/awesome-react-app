@@ -1,11 +1,9 @@
-const child_process = require('child-process-promise')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 const emoji = require('node-emoji')
 const hooks = require('./hooks')
+const spawn = require('./utils/spawnHelper')
 
-const spawn = child_process.spawn
-const exec = child_process.exec
 const actions = hooks.actions
 const questions = hooks.questions
 
@@ -16,7 +14,7 @@ const terminalOpts = {
 
 const createApp = folderName => {
   spawn('create-react-app', [folderName], terminalOpts)
-    .then( () => showQuestions(folderName))
+    .then(() => showQuestions(folderName))
 }
 
 const showQuestions = folderName =>
