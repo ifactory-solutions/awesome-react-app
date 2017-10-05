@@ -17,8 +17,8 @@ const func = (cwd, folderName) => {
   console.log(`${emoji.get('fire')}  ${chalk.cyan('Installing eslint')} ${emoji.get('fire')}`)
   console.log('\n\n')
 
-  return fs.copy(`${__dirname}/.eslintrc.json`, `${cwd}/${folderName}/.eslintrc`)
-      .then(() => addEslintFileSuccess(cwd, folderName))
+  return fs.copy(`${__dirname}/.eslintrc.json`, `${cwd}/${folderName}/.eslintrc.json`)
+    .then(() => addEslintFileSuccess(cwd, folderName))
 }
 
 const addEslintFileSuccess = (cwd, folderName) => {
