@@ -13,18 +13,19 @@ const terminalOpts = {
 
 const createApp = folderName => {
   checkPackageInstalled('create-react-app')
-  .then(() => 
-    spawn('create-react-app', [folderName], terminalOpts)
-    .then( () => showQuestions(folderName))
-    //TODO ask for install the package
-  ).catch(() => console.log(`${emoji.get('scream_cat')} create-react-app is not installed`))
+    .then(() => executeCreateReactApp(folderName, terminalOpts))
+    .catch(() => showCreateAppError(`create-react-app is not installed.\n${chalk.blue('info: ')}Install create-react-app using: npm i -g create-react-app`))
 }
+
+const executeCreateReactApp = (folderName, terminalOpts) =>
+  spawn('create-react-app', [folderName], terminalOpts)
+    .then(() => showQuestions(folderName))
 
 const showQuestions = folderName =>
   inquirer.prompt(questions).then(handleOptions.bind(this,folderName))
 
 // TODO: Add error message
-const showCreateAppError = () => console.log('Error')
+const showCreateAppError = error => console.log(`${chalk.red('error: ')}${error}`)
 
 const handleOptions = (folderName, answers) => {
   const cwd = process.cwd()
@@ -36,7 +37,7 @@ const handleOptions = (folderName, answers) => {
   filteredActions.push(showEndProcessText)
 
   filteredActions
-    .reduce( (promise, func) => promise .then(() => func(cwd, folderName)), Promise.resolve())
+  .reduce( (promise, func) => promise .then(() => func(cwd, folderName)), Promise.resolve())
 }
 
 const showEndProcessText = () => {
@@ -48,8 +49,6 @@ const showEndProcessText = () => {
   Promise.resolve()
 }
 
-const checkPackageInstalled = packageName => {
-  return exec(`npm list -g ${packageName}`)
-}
+const checkPackageInstalled = packageName => exec(`${packageName} --version`)
 
 module.exports = createApp
