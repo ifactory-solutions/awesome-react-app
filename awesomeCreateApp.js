@@ -24,7 +24,6 @@ const executeCreateReactApp = (folderName, terminalOpts) =>
 const showQuestions = folderName =>
   inquirer.prompt(questions).then(handleOptions.bind(this,folderName))
 
-// TODO: Add error message
 const showCreateAppError = error => console.log(`${chalk.red('error: ')}${error}`)
 
 const handleOptions = (folderName, answers) => {
