@@ -3,7 +3,6 @@ const packageJsonHelper = require('./../../utils/packageJsonHelper')
 const emoji = require('node-emoji')
 const chalk = require('chalk')
 const spawn = require('./../../utils/spawnHelper')
-
 const loadPackageJsonFromPath = packageJsonHelper.loadPackageJsonFromPath
 const savePackageJsonIn = packageJsonHelper.savePackageJsonIn
 

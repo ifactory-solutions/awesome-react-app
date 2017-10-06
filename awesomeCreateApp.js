@@ -3,7 +3,6 @@ const inquirer = require('inquirer')
 const emoji = require('node-emoji')
 const hooks = require('./hooks')
 const spawn = require('./utils/spawnHelper')
-
 const actions = hooks.actions
 const questions = hooks.questions
 
