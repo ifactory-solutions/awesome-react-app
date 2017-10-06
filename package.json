@@ -1,16 +1,21 @@
 {
+  "author": "Ifactory Solutions",
   "name": "awesome-react-app",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Always the latest version of 'create-react-app' with awesome configurations (lint, commit lint, husk, editor config, etc) ",
   "main": "index.js",
   "bin": {
     "awesome-react-app": "index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifactory-solutions/awesome-react-app.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": ["create-react-app", "eslint", "editor-config", "boilerplate"],
+  "license": "MIT",
   "dependencies": {
     "chalk": "^2.1.0",
     "child-process-promise": "^2.2.1",
