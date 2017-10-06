@@ -1,10 +1,8 @@
-const child_process = require('child-process-promise')
 const fs = require('fs-extra')
 const packageJsonHelper = require('./../../utils/packageJsonHelper')
 const emoji = require('node-emoji')
 const chalk = require('chalk')
-
-const spawn = child_process.spawn
+const spawn = require('./../../utils/spawnHelper')
 const loadPackageJsonFromPath = packageJsonHelper.loadPackageJsonFromPath
 const savePackageJsonIn = packageJsonHelper.savePackageJsonIn
 
