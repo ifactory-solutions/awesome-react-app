@@ -61,8 +61,6 @@ npm install -g awesome-react-app
 **You’ll need to have Create React App on your machine**. Awesome React App is
 a wrapper from [**Create React App**](https://github.com/facebookincubator/create-react-app) with some cool stuff (linter, commit linter, husky, .editorconfig, etc).
 
-**This tool doesn’t assume a Node backend**. The Node installation is only required for Create React App itself.
-
 ### Creating an Awesome App
 
 To create a new app, run:
