@@ -20,6 +20,13 @@
 </p>
 
 
+<p align="center" margin-bottom="0">
+  <a href="" target="\_blank">
+    <img alt="Inside Client Logo" width="auto" height="auto" src="img/awesome-logo.png">
+  </a>
+</p>
+
+
 Always the latest version of [`create-react-app`](https://github.com/facebookincubator/create-react-app)  with awesome configurations (linter, commit linter, husky, .editorconfig, etc)
 
 
