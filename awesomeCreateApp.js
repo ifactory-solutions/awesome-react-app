@@ -1,8 +1,10 @@
+const child_process = require('child-process-promise')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
 const emoji = require('node-emoji')
 const hooks = require('./hooks')
 const spawn = require('./utils/spawnHelper')
+const exec = child_process.exec
 const actions = hooks.actions
 const questions = hooks.questions
 
