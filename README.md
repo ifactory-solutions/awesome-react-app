@@ -5,6 +5,12 @@
   <a href="https://github.com/ifactory-solutions/awesome-react-app/stargazers">
     <img alt="GitHub Stars" src="https://img.shields.io/github/stars/ifactory-solutions/awesome-react-app.svg?style=social&label=Star">
   </a>
+  <a href="https://www.npmjs.com/package/awesome-react-app">
+    <img alt="GitHub Issues" src="https://img.shields.io/npm/v/awesome-react-app.svg?style=flat-square">
+  </a>
+  <a href="https://www.npmjs.com/package/awesome-react-app">
+    <img alt="GitHub Issues" src="https://img.shields.io/npm/dm/awesome-react-app.svg?style=flat-square">
+  </a>
   <a href="https://github.com/ifactory-solutions/awesome-react-app/issues">
     <img alt="GitHub Issues" src="https://img.shields.io/github/issues/ifactory-solutions/awesome-react-app.svg?style=flat-square">
   </a>
