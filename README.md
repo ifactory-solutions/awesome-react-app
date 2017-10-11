@@ -35,6 +35,9 @@
 
 Always the latest version of [`create-react-app`](https://github.com/facebookincubator/create-react-app)  with awesome configurations (linter, commit linter, husky, .editorconfig, etc)
 
+<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/ce94p28gU7iTdDGngDaeDL5y/ifactory-solutions/awesome-react-app'>
+  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/ce94p28gU7iTdDGngDaeDL5y/ifactory-solutions/awesome-react-app.svg' />
+</a>
 
 ## Quick Overview
 
