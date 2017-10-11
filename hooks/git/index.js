@@ -1,6 +1,7 @@
 const emoji = require('node-emoji')
 const chalk = require('chalk')
 const spawn = require('./../../utils/spawnHelper')
+const fs = require('fs-extra')
 
 const question = {
   name: 'git',
@@ -10,11 +11,7 @@ const question = {
 
 
 function func (cwd, folderName) {
-
-  console.log('\n\n')
-  console.log(`${emoji.get('fire')}  ${chalk.cyan('Initializing git repository')} ${emoji.get('fire')}`)
-  console.log('\n\n')
-
+  const gitExists = fs.pathExistsSync(`${cwd}/${folderName}/.git`)
   const command = 'git init'
   const terminalOpts = {
     cwd: `${cwd}/${folderName}`,
@@ -22,7 +19,18 @@ function func (cwd, folderName) {
     stdio:'inherit',
   }
 
-  return spawn(command, [], terminalOpts)
+  if (gitExists) {
+    console.log('\n\n')
+    console.log(chalk.cyan('Git repository already initialized. Skipping...'))
+    console.log('\n\n')
+    return Promise.resolve(true)
+  }
+  else {
+    console.log('\n\n')
+    console.log(`${emoji.get('fire')}  ${chalk.cyan('Initializing git repository')} ${emoji.get('fire')}`)
+    console.log('\n\n')
+    return spawn(command, [], terminalOpts)
+  }
 }
 
 module.exports = {
