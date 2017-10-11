@@ -22,7 +22,18 @@ const func = (cwd, folderName) => {
 }
 
 const addEslintFileSuccess = (cwd, folderName) => {
-  const command = `npm i eslint eslint-config-airbnb babel-eslint --save-dev`
+  const eslintDependencies = [
+    'eslint',
+    'eslint-config-airbnb',
+    'eslint-plugin-jsx-a11y',
+    'eslint-plugin-import',
+    'eslint-plugin-react',
+    'babel-eslint',
+    'lint-staged',
+    'husky'
+  ]
+
+  const command = `npm i ${eslintDependencies.join(' ')} --save-dev`
 
   const terminalOpts = {
     cwd: `${cwd}/${folderName}`,
@@ -38,6 +49,12 @@ const installPackagesSuccess = (cwd, folderName) => {
   return loadPackageJsonFromPath(`${cwd}/${folderName}/package.json`)
     .then( data => {
       data.scripts.eslint =  'eslint .'
+      data.scripts.precommit = 'lint-staged'
+      data['lint-staged'] = {
+        '*.js': [
+          'eslint --cache --max-warnings 0'
+        ]
+      }
 
       return savePackageJsonIn(`${cwd}/${folderName}/package.json`, data)
     })

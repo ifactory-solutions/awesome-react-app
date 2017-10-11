@@ -1,4 +1,5 @@
 const hooks = [
+  require('./git'),
   require('./eslint'),
   require('./editorconfig'),
 ]
