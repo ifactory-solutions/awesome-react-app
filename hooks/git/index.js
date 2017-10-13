@@ -24,8 +24,7 @@ function func (cwd, folderName) {
     console.log(chalk.cyan('Git repository already initialized. Skipping...'))
     console.log('\n\n')
     return Promise.resolve(true)
-  }
-  else {
+  } else {
     console.log('\n\n')
     console.log(`${emoji.get('fire')}  ${chalk.cyan('Initializing git repository')} ${emoji.get('fire')}`)
     console.log('\n\n')

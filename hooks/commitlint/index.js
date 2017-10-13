@@ -34,9 +34,7 @@ function func (cwd, folderName) {
 
       return spawn(command, [], terminalOpts)
     })
-    .then(() => {
-      return loadPackageJsonFromPath(`${cwd}/${folderName}/package.json`)
-    })
+    .then(() => loadPackageJsonFromPath(`${cwd}/${folderName}/package.json`))
     .then((data => {
       data.scripts.commitmsg = 'commitlint -e'
       return savePackageJsonIn(`${cwd}/${folderName}/package.json`, data)
