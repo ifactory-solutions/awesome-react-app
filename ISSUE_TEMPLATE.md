@@ -1,6 +1,6 @@
 ## Prerequisites
 
-* [ ] Did you check if your issue has already being reported?
+* [ ] Did you check if your issue has already been reported?
 * [ ] Are you running the latest version?
 * [ ] Did you check the [Official Create React App User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)?
 
@@ -17,7 +17,7 @@
 <!--- or ideas how to implement the addition or change -->
 
 ## Steps to Reproduce (for bugs)
-<!--- Provide a link to a live example, or an unambiguous set of steps to -->
+<!--- Provide a link to a live example or an unambiguous set of steps to -->
 <!--- reproduce this bug. Include code to reproduce, if relevant -->
 1.
 2.
