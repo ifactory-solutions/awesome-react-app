@@ -78,7 +78,7 @@ cd my-app
 ```
 
 It will create a directory called `my-app` inside the current folder.<br>
-Inside that directory, it will ask to you for add some configurations (eslint,
+Inside that directory, you will be asked for add some configurations (eslint,
   editorconfig) and generate the initial project structure and install the dependencies.
 
 Once the installation is done, you can run some commands inside the project folder:
@@ -103,7 +103,7 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br>
-By default, it also includes a service worker so that your app loads from local cache on future visits.
+By default, it also includes a service worker so that your app loads from the local cache on future visits.
 
 Your app is ready to be deployed.
 
