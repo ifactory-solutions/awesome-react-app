@@ -1,3 +1,4 @@
+const fs = require('fs');
 const child_process = require('child-process-promise')
 const chalk = require('chalk')
 const inquirer = require('inquirer')
@@ -35,10 +36,25 @@ const handleOptions = (folderName, answers) => {
     .filter(action => Object.keys(answers).includes(action.type) && answers[action.type])
     .map( action => action.func)
 
+  filteredActions.push(rewriteReadme)
   filteredActions.push(showEndProcessText)
 
   filteredActions
     .reduce( (promise, func) => promise .then(() => func(cwd, folderName)), Promise.resolve())
+}
+
+const rewriteReadme = (cwd, folderName) => {
+  const readme = `./${folderName}/README.md`;
+
+  fs.readFile(readme, 'utf8', (error, data) => {
+    if (error) console.log(`${chalk.red('error: ')}${error}`)
+
+    const newReadme = data.replace(/(my-app)/g, `${folderName}`)
+    fs.writeFile(readme, newReadme, 'utf8', (err) => {
+      if (err) console.log(`${chalk.red('error: ')}${error}`)
+      Promise.resolve()
+    })
+  })
 }
 
 const showEndProcessText = () => {
