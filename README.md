@@ -14,7 +14,7 @@
   <a href="https://github.com/ifactory-solutions/awesome-react-app/issues">
     <img alt="GitHub Issues" src="https://img.shields.io/github/issues/ifactory-solutions/awesome-react-app.svg?style=flat-square">
   </a>
-  <a href="https://github.comifactory-solutions/awesome-react-app/pulls">
+  <a href="https://github.com/ifactory-solutions/awesome-react-app/pulls">
     <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr-raw/ifactory-solutions/awesome-react-app.svg?style=flat-square">
   </a>
   <a href="https://gitter.im/ifactory-open-source/awesome-react-app">
