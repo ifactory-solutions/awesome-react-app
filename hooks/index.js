@@ -3,6 +3,7 @@ const hooks = [
   require('./eslint'),
   require('./commitlint'),
   require('./editorconfig'),
+  require('./redux')
 ]
 
 module.exports = {
