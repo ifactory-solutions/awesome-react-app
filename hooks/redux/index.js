@@ -1,6 +1,7 @@
 const packageJsonHelper = require('./../../utils/packageJsonHelper')
 const emoji = require('node-emoji')
 const chalk = require('chalk')
+const fs = require('fs-extra')
 const spawn = require('./../../utils/spawnHelper')
 const loadPackageJsonFromPath = packageJsonHelper.loadPackageJsonFromPath
 const savePackageJsonIn = packageJsonHelper.savePackageJsonIn
@@ -17,6 +18,8 @@ const func = (cwd, folderName) => {
   console.log('\n\n')
 
   return addRedux(cwd, folderName)
+    .then(() => fs.copy(`${__dirname}/reducer.js`, `${cwd}/src/reducer.js`))
+    .then(() => fs.copy(`${__dirname}/store.js`, `${cwd}/src/store.js`))
 }
 
 const addRedux = (cwd, folderName) => {
