@@ -18,8 +18,8 @@ const func = (cwd, folderName) => {
   console.log('\n\n')
 
   return addRedux(cwd, folderName)
-    .then(() => fs.copy(`${__dirname}/reducer.js`, `${cwd}/src/reducer.js`))
-    .then(() => fs.copy(`${__dirname}/store.js`, `${cwd}/src/store.js`))
+    .then(() => fs.copy(`${__dirname}/reducer.js`, `${cwd}/${folderName}/src/reducer.js`))
+    .then(() => fs.copy(`${__dirname}/store.js`, `${cwd}/${folderName}/src/store.js`))
 }
 
 const addRedux = (cwd, folderName) => {
