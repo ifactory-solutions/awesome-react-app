@@ -1,7 +1,7 @@
 {
   "author": "Ifactory Solutions",
   "name": "awesome-react-app",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Always the latest version of 'create-react-app' with awesome configurations (lint, commit lint, husk, editor config, etc) ",
   "main": "index.js",
   "bin": {
